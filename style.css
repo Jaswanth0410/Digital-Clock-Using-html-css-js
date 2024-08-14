@@ -1,0 +1,66 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4);
+}
+
+.clock{
+    border: 2px solid ;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+} */
+
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock {
+    /* font-family: 'Roboto', sans-serif; Modern font */
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: 700;
+    background: none; /* Gradient background for the clock */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    border: 5px solid ; /* Transparent border to show the gradient border */
+    border-image: linear-gradient(135deg, #00c6ff, #0072ff 1) ; /* Gradient border */
+    font-size: 3rem; /* Font size for the clock */
+    line-height: 1.5; /* Line height for spacing */
+}
+
+/* Digital effect: blinking colon */
+/* .clock::after {
+    content: ':';
+    animation: blink 1s step-start infinite; /* Blinking animation */
+/* } */ 
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .clock {
+        width: 80%;
+        font-size: 2rem; /* Adjust font size on small screens */
+    }
+}
